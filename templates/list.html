@@ -1,0 +1,21 @@
+<!--Importo mi Layout-->
+{% extends 'layout.html' %}
+
+<!--Título de la Página-->
+{% block title %}Mis Tareas.{% endblock %}
+
+{% block content %}
+    <h2>Mi Lista:</h2>
+    <ol id='task-list'>
+    {% for task in tasks %}
+        <li>
+            <div id='block'>
+                {{task.1}}.
+                <a id='delete' href=' {{url_for("delete_task", id_task=task.0)}}'>Borrar</a>
+                <a id='edit'  href=' {{url_for("edit_task", id_task=task.0)}}'>Editar</a>
+            </div>
+        </li>
+    {% endfor %}
+    </ol>
+
+{% endblock %}

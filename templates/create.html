@@ -1,0 +1,24 @@
+<!--Importo mi Layout-->
+{% extends 'layout.html' %}
+
+<!--Título de la Página-->
+{% block title %}Crear Tarea.{% endblock %}
+
+{% block content %}
+
+    <div> 
+        {% if tasks %}
+            <h1>Editar Tarea. {{tasks.1}} </h1>
+        {% else %}
+            <h1>Crear Tarea.</h1>
+        {% endif %}
+
+        <form method='POST'>
+            <label for='task'>Título:</label>
+            <input type='text' placeholder='Tarea...' name='task' />
+
+            <input type='submit' value='Guardar'>
+        </form>
+    </div>
+
+{% endblock %}

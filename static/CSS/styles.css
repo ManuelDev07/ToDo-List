@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#header{
+    background-color: lightgreen;
+    padding: 25px;
+    text-align: center;
+}
+
+#menu{
+    padding: 25px;
+    background-color: lightgray;
+    margin-bottom: 25px;
+}
+
+#menu li{
+    float: left;
+    list-style: none;
+    position: relative;
+    margin-right: 17px;
+}
+
+.content{
+    padding: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 9px;
+    box-shadow: 0px 0px 3px 0px black;
+}
+
+h1{
+    padding: 7px;
+}
+
+input[type='text']{
+    padding: 7px;
+    border-radius: 9px;
+    border: black solid;
+}
+
+
+input[type='submit']{
+    padding: 7px;
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+}
+
+#block{
+    padding: 15px;
+} 
+
+#task-list li{
+    margin: 15px;
+}
+
+#delete{
+    padding: 7px;
+    background-color: red;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer; 
+}
+
+#edit{
+    padding: 7px;
+    background-color: lightblue;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer; 
+}
+
+footer{
+    background-color: lightgreen;
+    padding: 25px;
+    margin-left: 25%;
+    border-radius: 12px;
+    width: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 25px;
+}

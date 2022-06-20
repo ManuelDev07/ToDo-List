@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/img/icon.png" />   
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href="{{url_for('static', filename='CSS/styles.css')}}">
+    <title>ToDo List | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id='header'>
+        <h1>To Do List.</h1>
+    </div>
+
+    <div id='menu'>
+        <ul>
+            <li><a href='{{url_for("todo_list")}}'>Crear</a></li>
+            <li><a href='{{url_for("task_list")}}'>Mis Tareas</a></li>
+    </div>
+
+    <div class='content'>
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+    
+    <footer>
+        <p><strong>Built and Designed by Manuel Bayona &copy;.</strong></p>
+        <p><strong>Created in 06/18/2022.</strong></p>
+    </footer>
+</body>
+</html>
