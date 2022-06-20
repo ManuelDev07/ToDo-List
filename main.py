@@ -19,6 +19,9 @@ mysql = MySQL(app)
 #Crear Nota:
 @app.route('/create-task', methods=['GET','POST'])
 def todo_list():
+    '''
+    Función que permitirá Insertar registros recibiendolos mediante el formulario de HTML a la BBDD
+    '''
 
     if request.method == 'POST':
         task = request.form['task']
@@ -41,6 +44,8 @@ def todo_list():
 #Mostrar mis notas:
 @app.route('/task-list')
 def task_list():
+    '''Función que se encarga de seleccionar todos los registros almacenados en la BBDD, almacenarlos en una variable (en forma de lista) para luego ser mostrados en HTML'''
+    
     #cursor:
     cursor = mysql.connection.cursor()
 
@@ -59,6 +64,11 @@ def task_list():
 #Borrar Notas:
 @app.route('/delete/<id_task>')
 def delete_task(id_task):
+    '''
+    Función que eliminará los registros de la BBDD recibiendo como parámetro por la URL el id del elemento a borrar. Parámetros:
+    -id_task: la PK del elemento para así eliminarse al hacerse la consulta
+    '''
+    
     #cursor:
     cursor = mysql.connection.cursor()
 
@@ -75,6 +85,10 @@ def delete_task(id_task):
 #Editar tarea:
 @app.route('/edit-task/<int:id_task>', methods=['GET','POST'])
 def edit_task(id_task):
+    '''
+    Función que actualizará/editar los registros de la BBDD recibiendo como parámetro por la URL el id del elemento. Parámetros:
+    -id_task: la PK del elemento para así hacer el UPDATE en la consulta    
+    '''
 
     if request.method == 'POST':
         new_titulo = request.form['task']
